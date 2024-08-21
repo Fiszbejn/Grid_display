@@ -5,18 +5,34 @@
 }
 
 :root {
-    --color-light-700: #ffffff;
-    --color-light-500: #f9f9f9;
-    --color-light-300: #cccccc;
-    --gradient: linear-gradient(45deg,
-    hsl(240deg 19% 17%) 0%,
-    hsl(284deg 16% 21%) 9%,
-    hsl(326deg 17% 26%) 33%,
-    hsl(348deg 19% 33%) 62%,
-    hsl(7deg 19% 38%) 80%,
-    hsl(21deg 22% 41%) 90%,
-    hsl(35deg 20% 44%) 96%,
-    hsl(55deg 15% 47%) 100%);
+    --color-light-text: #e4e4e4;
+    --color-light: #6d6d6d;
+    --color-dark: #141414;
+    --gradient: linear-gradient(
+        20deg,
+        hsl(0deg 0% 8%) 5%,
+        hsl(0deg 0% 10%) 17%,
+        hsl(0deg 0% 12%) 24%,
+        hsl(0deg 0% 14%) 29%,
+        hsl(0deg 0% 15%) 34%,
+        hsl(0deg 0% 16%) 39%,
+        hsl(0deg 0% 17%) 44%,
+        hsl(0deg 0% 19%) 48%,
+        hsl(0deg 0% 20%) 52%,
+        hsl(0deg 0% 21%) 56%,
+        hsl(0deg 0% 22%) 59%,
+        hsl(0deg 0% 23%) 63%,
+        hsl(0deg 0% 25%) 67%,
+        hsl(0deg 0% 26%) 70%,
+        hsl(0deg 0% 28%) 74%,
+        hsl(0deg 0% 30%) 77%,
+        hsl(0deg 0% 31%) 80%,
+        hsl(0deg 0% 33%) 83%,
+        hsl(0deg 0% 34%) 87%,
+        hsl(0deg 0% 36%) 90%,
+        hsl(0deg 0% 37%) 93%,
+        hsl(0deg 0% 38%) 96%,
+        hsl(0deg 0% 39%) 100%);
 }
 
 html {
@@ -25,16 +41,21 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: calibri;
-    background-color: var(--color-light-500);
+    font-family: "Gruppo";
+    background-color: var(--color-dark);
 }
 
 header {
     text-align: center;
     padding: 2rem;
-    background-color: var(--color-light-700);
-    border-bottom: 1px solid var(--color-light-300);
-    padding: 4rem;    
+    border-bottom: 1px solid var(--color-light);
+    padding: 4rem;
+    margin: 0 1.5rem;    
+}
+
+header h1 {
+    color: var(--color-light-text);
+    font-weight: 500;
 }
 
 main {
@@ -45,14 +66,14 @@ main {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 1fr));
-    gap: 1rem;
+    gap: 1.2rem;
     padding: 2rem;
 }
 
 .product-item {
     background-image: var(--gradient);
-    color: var(--color-light-700);
-    border-radius: 7px;
+    color: var(--color-light-text);
+    border-radius: 5px;
     padding: 4rem 1rem;
     text-align: center;
     display: flex;
@@ -74,18 +95,20 @@ main {
 }
 
 .product-item p {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2rem;
 }
 
 .product-item div {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
 }
 
 .product-item div h3 {
     font-size: 2rem;
+    font-weight: 500;
 }
 
 .span-row-2 {
@@ -98,11 +121,14 @@ main {
 
 footer {
     text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-    background-color: var(--color-light-700);
-    border-top: 1px solid var(--color-light-300);
+    padding: 4rem;
+    margin: 2rem 1.5rem;
+    border-top: 1px solid var(--color-light);
     font-weight: 500;
+}
+
+footer p {
+    color: var(--color-light-text);
 }
 
 @media(width <= 1024px) {
